@@ -31,7 +31,22 @@ h2 {
 
 /*header*/
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 60px 0 80px;
+}
+
+nav li {
+    margin-left: 40px;
+}
+
+nav ul {
+    display: flex;
+}
+
+.active {
+    color: #FFBF9D;
 }
 
 /*news*/
@@ -50,7 +65,6 @@ header {
     padding: 20px;
     background: #FFBF9D;
     color: #fff;
-    font-size: 15px;
     line-height: 1;
     text-align: center;
 }
@@ -67,14 +81,68 @@ h3 {
     margin-bottom: 80px;
 }
 
+.allpost {
+    margin-bottom: -40px;
+}
+
 .menu article {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.menu .text {
+    margin-left: 20px;
 }
 
 /*newsletter*/
 .newsletter {
+    padding: 60px 0;
     background: #FDF5ED;
+}
+
+.newsletter .text {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px;
+}
+
+.newsletter a {
+    display: block;
+    width: 240px;
+    margin-top: 35px;
+    padding: 20px;
+    background: #FFBF9D;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.newsletter dl {
+    margin-bottom: -15px;
+}
+
+.newsletter dt {
+    width: 100px;
+    padding: 5px 0;
+    background: #303030;
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter dd {
+    flex: 1;
+    padding: 5px 0 5px 15px;
+    word-break: break-all;
 }
 
 /*footer*/
@@ -87,6 +155,22 @@ small {
 
 /*デスクトップ版　640px以上*/
 @media (min-width:640px) {
+    .contact {
+        font-weight: bold;
+    }
+
+    header h1 {
+        width: 164px;
+    }
+
+    nav {
+        flex: 1;
+    }
+
+    .contact {
+        margin-left: auto;
+    }
+
     .allpost {
         display: flex;
         flex-wrap: wrap;
@@ -106,5 +190,24 @@ small {
 
     .menu article {
         width: 48.75%;
+    }
+
+    .newsletter .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .newsletter .text {
+        width: 62%;
+        margin-bottom: 0;
+        padding-right: 3.75%;
+        padding-bottom: 0;
+        border-right: 1px solid #707070;
+        border-bottom: none;
+    }
+
+    .newsletter dl {
+        width: 34.375%;
     }
 }
